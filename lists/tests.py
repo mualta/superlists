@@ -26,6 +26,10 @@ class HomePageTest(TestCase):
 		request.POST['item_text'] = 'A new list item'
 		
 		response = home_page(request)
+
+		self.assertEqual(Item.objects.all().count(), 1)
+		new_item = Item.objects.all()[0]
+		self.assertEqual(new_item.text, 'A new list item')
 		
 		self.assertIn('A new list item', response.content.decode())
 		expected_html = render_to_string(
