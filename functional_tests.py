@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import unittest
+import time
 
 
 
@@ -25,6 +26,7 @@ class NewVisitorTest(unittest.TestCase):
 
 		# She is invited to enter a to-do item straight away
 		inputbox = self.browser.find_element_by_id('id_new_item')
+		time.sleep(5)
 		self.assertEqual(inputbox.get_attribute('placeholder'), 'Enter a to-do item')
 		
 		# She types "Buy peacock feathers" into a text box
