@@ -1,7 +1,8 @@
 Provisioning a new site
 =======================
 
-deploy_tools/provisioning_notes.md.
+deploy\_tools/provisioning\_notes.md
+
 
 ## Required packages:
 
