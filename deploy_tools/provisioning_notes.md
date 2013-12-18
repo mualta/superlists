@@ -1,9 +1,6 @@
 Provisioning a new site
 =======================
 
-deploy\_tools/provisioning\_notes.md
-
-
 ## Required packages:
 
 * nginx
