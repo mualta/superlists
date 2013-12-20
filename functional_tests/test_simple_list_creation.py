@@ -68,5 +68,3 @@ class NewVisitorTest(FunctionalTest):
 		self.assertIn('Buy milk', page_text)
 		
 		# Satisified, she goes back to sleep
-		#self.fail('Finish the test!')
-		
