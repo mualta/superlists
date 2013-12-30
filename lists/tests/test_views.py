@@ -4,9 +4,9 @@ from django.utils.html import escape
 from lists.forms import ItemForm, EMPTY_LIST_ERROR
 from lists.models import Item, List
 
-from django.core.urlresolvers import resolve
-#from django.http import HttpRequest
-#from django.template.loader import render_to_string
+#from django.core.urlresolvers import resolve
+from django.http import HttpRequest
+from django.template.loader import render_to_string
 from lists.views import home_page
 
 
@@ -36,6 +36,13 @@ def test_invalid_input_renders_form_with_errors(self):
 class HomePageTest(TestCase):
 
 	maxDiff = None
+
+	def test_home_page_returns_correct_html(self):
+		request = HttpRequest()
+		response = home_page(request)
+		expected_html = render_to_string('home.html', {'form': ItemForm()})
+		self.assertMultiLineEqual(response.content.decode(), expected_html)
+
 
 	def test_home_page_renders_home_template(self):
 		response = self.client.get('/')

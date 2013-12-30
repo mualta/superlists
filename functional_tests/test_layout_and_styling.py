@@ -18,8 +18,8 @@ class LayoutAndStylingTest(FunctionalTest):
 
 		# She starts a new list and sees the input is nicely
 		# centered there too
-		inputbox = self.get_item_input_box()
 		inputbox.send_keys('testing\n')
+		inputbox = self.get_item_input_box()
 		window_width = self.browser.get_window_size()['width']
 		self.assertAlmostEqual(
 			inputbox.location['x'] + inputbox.size['width'] / 2,
