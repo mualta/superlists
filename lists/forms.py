@@ -14,7 +14,7 @@ class ItemForm(forms.models.ModelForm):
 			'text': forms.fields.TextInput(attrs={
 						'placeholder': 'Enter a to-do item',
 						'class': 'form-control input-lg',
-					}),
+			}),
 		}
 
 	def __init__(self, *args, **kwargs):

@@ -5,7 +5,7 @@ from django.conf.urls import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$',                     'lists.views.home_page', name='home'),
+    url(r'^$', 'lists.views.home_page', name='home'),
     url(r'^lists/', include('lists.urls')),
     
     # Uncomment the admin/doc line below to enable admin documentation:
